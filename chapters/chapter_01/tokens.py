@@ -67,3 +67,48 @@ decode1 = reverse_vocabulary1[encode1]
 
 print(f"Encoded: {encode1}, Decoded: {decode1}")
 
+
+####################################################################
+
+#character level tokenization
+
+text_new = "Hello, I am Yuvraj Kumar!"
+
+vocab = sorted(set(text_new))
+
+print(vocab)
+
+string_to_int = {}
+count = 0
+for i in vocab:
+    string_to_int[i] = count
+    count = count + 1
+
+print(string_to_int)
+
+int_to_string = {}
+count1 = 0
+for j in vocab:
+    int_to_string[count1] = j
+    count1 = count1 + 1
+
+print(int_to_string)
+
+def encode_ch(a):
+    s = []
+    for i in a:
+        s.append(string_to_int[i])
+    return s
+
+encod = encode_ch("Yuv")
+print(encod)
+
+def decode_ch(a):
+    s = ""
+    for j in a:
+        s = s + int_to_string[j]
+        
+    return s
+
+decod = decode_ch(encod)
+print(decod)
