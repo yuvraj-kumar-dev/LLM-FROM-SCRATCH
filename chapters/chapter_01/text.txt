@@ -1,0 +1,59 @@
+Hello,
+
+About your first question, I also just started to CS50w and tried to use git to submit project 0 like you. And after some struggle, I managed to do it. I will try to help you about it.
+
+1- Make sure about your file system. What I mean is, don't create new folders inside your project to wrap actual project files.
+
+Ex: For project:0 which is search, make sure you are inside search/ folder and all your html+css inside of it.
+
+2- git init
+
+Go to your console inside vscode and use "git init". This will create a local repository inside your computer.
+
+3- git add *
+
+This will add all of your files to it.
+
+4- git commit -m [yourMessage]
+
+This will commit your changes and also "adding" to your local repository.
+
+Keep working this way through the project, so you can track your work in this local repository.
+
+When you finish with project and decided to submit;
+
+5- git remote add [name] [URL]
+
+This will connect your local repository with a remote repository, which is our me50 repository they created for us.
+
+[name] = this is a random nickname for your remote, so you can use anything you want, but don't forget we will use this. For example, I used cs50 as a nickname.
+
+[URL] = They actually gave this link to us in submit part of project. It was https://github.com/me50/USERNAME.git. Don't forget to change USERNAME inside the link.
+
+6- git push [name] [currentLocalBranch]:[theBranchNameTheyGiveYou]
+
+This will push your local repository to remote, which we just added with a brand-new branch on it.
+
+Let me explain variables here:
+
+[name] = the nickname you just gave it to our me50 repository.
+
+[currentLocalBranch] = when you use "git init", git automatically creates a branch which called master or main. You can learn your branch name in multiple ways;
+
+a-) Check left bottom corner of your vscode, next beside of branch icon there will be a name for your current branch.
+
+b-) Inside terminal while you're entering command it shows your current path and inside paranthesis your branch name like (master)
+
+c-) use "git status" inside terminal, and you will see information message like "On branch master".
+
+d-) use "git branch" inside terminal, and the name with asterisk left of it is your currently working branch.
+
+[theBranchNameTheyGiveYou] = I think they will specify this for every project, but for search it was "web50/projects/2020/x/search".
+
+After you're done with these steps, don't forget to check if it's correct via "https://github.com/me50/USERNAME/blob/web50/projects/2020/x/search/index.html" link they gave you.
+
+Don't forget to change USERNAME inside the link, and you should see your index.html code.
+
+Note: In git commands, be careful about spaces and ":"(colon).
+
+Hope this helps, happy learning!
