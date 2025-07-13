@@ -1,4 +1,20 @@
 import re
+import requests
+
+
+# # Step 1: Fetch the text file from the URL
+# url = "https://www.damienelliott.com/wp-content/uploads/2020/07/Lorem-ipsum-dolor-sit-amet.txt"
+# response = requests.get(url)
+
+# # Step 2: Check the response and get the text content
+# if response.status_code == 200:
+#     text = response.text
+#     print("Text fetched successfully!")
+    
+# else:
+#     print("Failed to fetch the text file. Status code:", response.status_code)
+
+# text = response.text
 
 #method1:
 
@@ -77,6 +93,7 @@ text_new = "Hello, I am Yuvraj Kumar!"
 with open("chapters/chapter_01/text.txt", "r", encoding="UTF-8") as f:
     text_get = f.read()
     print(len(text_get))
+    print(text_get[:100])
 
 vocab = sorted(set(text_get))
 
